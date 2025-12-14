@@ -1,0 +1,84 @@
+# =========================================================
+# 1. CONFIGURACIÓN GLOBAL (DEBE IR PRIMERO)
+# =========================================================
+
+# Comandos de inicio (JankyBorders blanco)
+after-startup-command = [
+    'exec-and-forget borders active_color=0xffffffff inactive_color=0x00000000 width=5.0 style=round hidpi=on blacklist="Infuse"'
+]
+
+# Comportamiento general
+start-at-login = true
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+# Layout por defecto (Tiling)
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+# Mover ratón al cambiar de monitor
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+# =========================================================
+# 2. SECCIÓN GAPS (ESPACIADO)
+# =========================================================
+[gaps]
+inner.horizontal = 10
+inner.vertical =   10
+outer.left =       10
+outer.bottom =     10
+outer.top =        10
+outer.right =      10
+
+# =========================================================
+# 3. ATAJOS DE TECLADO
+# =========================================================
+[mode.main.binding]
+
+# --- APLICACIONES ---
+alt-enter = 'exec-and-forget open -n /Applications/iTerm.app'
+alt-d = 'exec-and-forget open -n /Applications/Apps.app'
+
+# --- MOVIMIENTO (Personal) ---
+alt-j = 'focus left'
+alt-k = 'focus down'
+alt-i = 'focus up'
+alt-l = 'focus right'
+
+# --- MOVIMIENTO (NVIM HJKL) ---
+
+#alt-h = 'focus left'
+#alt-j = 'focus down'
+#alt-k = 'focus up'
+#alt-l = 'focus right'
+
+# --- MOVER VENTANAS (Personal) ---
+alt-shift-j = 'move left'
+alt-shift-k = 'move down'
+alt-shift-i = 'move up'
+alt-shift-l = 'move right'
+
+# --- GESTIÓN ---
+alt-w = 'close'
+alt-f = 'fullscreen'
+alt-shift-r = 'reload-config'
+
+# --- WORKSPACES ---
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+
+# --- RESIZE (Redimensionar) ---
+# Alt + Menos (-) para achicar
+alt-minus = 'resize smart -50'
+
+# Alt + Igual (=/+) para agrandar
+alt-equal = 'resize smart +50'
